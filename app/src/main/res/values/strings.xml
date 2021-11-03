@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Remote</string>
+    <string name="ch">CH</string>
+    <string name="menu">Menu</string>
+    <string name="back">BACK</string>
+    <string name="exit">EXIT</string>
+    <string name="epg">EPG</string>
+    <string name="recall">RECALL</string>
+    <string name="ok">OK</string>
+    <string name="info">INFO</string>
+    <string name="fav">FAV</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="tv_radio">Tv/\nRadio</string>
+    <string name="_0">0</string>
+    <string name="audio">Audio</string>
+    <string name="start_text">Catvision was promoted in 1985 by professionals who earlier worked in senior positions with the HCL group of companies – India’s largest computer and IT conglomerate.</string>
+    <string name="visit_our_website">Visit Our Website</string>
+    <string name="click_next_to_start_tutorial_else_skip">Click Next To Start Tutorial,\n Else Skip.</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+</resources>

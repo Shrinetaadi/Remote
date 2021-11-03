@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    tools:context="com.catvisionindia.remote.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/tutorialframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C3FFFFFF"
+        android:translationZ="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click_next_to_start_tutorial_else_skip"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNexttt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="@color/icon2"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSkiptt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="@color/icon2"
+                android:text="@string/skip"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
+
+
+            <ImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="@id/imageView2"
+                app:layout_constraintEnd_toStartOf="@id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toStartOf="@id/btnPower"
+                app:layout_constraintStart_toEndOf="@id/imgViewBack"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <ImageButton
+                android:id="@+id/btnPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="@color/bgWhole"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="@id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llDailPad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintBottom_toTopOf="@id/cvVolume"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDialPad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_1"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/btnNum4"
+                        app:layout_constraintEnd_toStartOf="@id/btnNum2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_2"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum1"
+                        app:layout_constraintEnd_toStartOf="@id/btnNum3"
+                        app:layout_constraintStart_toEndOf="@id/btnNum1"
+                        app:layout_constraintTop_toTopOf="@id/btnNum1" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_3"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btnNum2"
+                        app:layout_constraintTop_toTopOf="@id/btnNum2" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_4"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/btnNum7"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum1"
+                        app:layout_constraintStart_toStartOf="@id/btnNum1"
+                        app:layout_constraintTop_toBottomOf="@id/btnNum1" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_5"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum4"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum2"
+                        app:layout_constraintStart_toStartOf="@id/btnNum2"
+                        app:layout_constraintTop_toTopOf="@id/btnNum4" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_6"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum5"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum3"
+                        app:layout_constraintStart_toStartOf="@id/btnNum3"
+                        app:layout_constraintTop_toTopOf="@id/btnNum5" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_7"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/btnTVRadio"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum4"
+                        app:layout_constraintStart_toStartOf="@id/btnNum4"
+                        app:layout_constraintTop_toBottomOf="@id/btnNum4" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_8"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum7"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum5"
+                        app:layout_constraintStart_toStartOf="@id/btnNum5"
+                        app:layout_constraintTop_toTopOf="@id/btnNum7" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_9"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNum8"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum6"
+                        app:layout_constraintStart_toStartOf="@id/btnNum6"
+                        app:layout_constraintTop_toTopOf="@id/btnNum8" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnTVRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_rounded"
+                        android:padding="10dp"
+                        android:text="@string/tv_radio"
+                        android:textColor="@color/icon"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnNum7"
+                        app:layout_constraintStart_toStartOf="@+id/btnNum7"
+                        app:layout_constraintTop_toBottomOf="@id/btnNum7" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNum0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:background="@drawable/background_rounded"
+                        android:padding="15dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/icon"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnTVRadio"
+                        app:layout_constraintEnd_toEndOf="@id/btnNum8"
+                        app:layout_constraintStart_toStartOf="@id/btnNum8"
+                        app:layout_constraintTop_toTopOf="@id/btnTVRadio" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/background_rounded"
+                        android:padding="20dp"
+                        android:text="@string/audio"
+                        android:textColor="@color/icon"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnNum0"
+                        app:layout_constraintEnd_toEndOf="@+id/btnNum9"
+                        app:layout_constraintStart_toStartOf="@id/btnNum9"
+                        app:layout_constraintTop_toTopOf="@id/btnNum0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintEnd_toStartOf="@id/cvHome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llDailPad">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgVolumeUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_plus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgSpeaker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="false"
+                        android:src="@drawable/ic_volume_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgVolumeUp" />
+
+                    <ImageView
+                        android:id="@+id/imgVolumeDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_minus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgSpeaker" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cvVolume"
+                app:layout_constraintEnd_toStartOf="@id/cvChannel"
+                app:layout_constraintStart_toEndOf="@+id/cvVolume"
+                app:layout_constraintTop_toTopOf="@id/cvVolume">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="15dp">
+
+
+                    <ImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/frameKeypad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/background_rounded"
+                        android:backgroundTint="@color/icon2"
+                        android:padding="7dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgHome">
+
+                        <ImageView
+                            android:id="@+id/imgKeypad"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_dialpad" />
+                    </FrameLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imgMute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_volume_mute"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/frameKeypad" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cvHome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cvHome"
+                app:layout_constraintTop_toTopOf="@id/cvHome">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgChannelUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:scaleX="3.5"
+                        android:scaleY="3.5"
+                        android:src="@drawable/ic_arrow_up"
+                        app:layout_constraintBottom_toTopOf="@+id/txtCh"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtCh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:src="@drawable/ic_volume_up"
+                        android:text="@string/ch"
+                        android:textColor="@color/icon2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/imgChannelDown"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgChannelUp" />
+
+                    <ImageView
+                        android:id="@+id/imgChannelDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:padding="3dp"
+                        android:scaleX="3.5"
+                        android:scaleY="3.5"
+                        android:src="@drawable/ic_arrow_drop_down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCh" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageButton
+                android:id="@+id/btnRedHotkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dot"
+                app:layout_constraintEnd_toStartOf="@id/btnGreenHotkey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvHome"
+                app:tint="@color/hotkey1" />
+
+            <ImageButton
+                android:id="@+id/btnGreenHotkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dot"
+                app:layout_constraintBottom_toBottomOf="@id/btnRedHotkey"
+                app:layout_constraintEnd_toStartOf="@id/btnYellowHotkey"
+                app:layout_constraintStart_toEndOf="@id/btnRedHotkey"
+                app:layout_constraintTop_toBottomOf="@id/cvHome"
+                app:tint="@color/hotkey2" />
+
+            <ImageButton
+                android:id="@+id/btnYellowHotkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dot"
+                app:layout_constraintBottom_toBottomOf="@id/btnRedHotkey"
+                app:layout_constraintEnd_toStartOf="@id/btnBlueHotkey"
+                app:layout_constraintStart_toEndOf="@id/btnGreenHotkey"
+                app:layout_constraintTop_toBottomOf="@id/cvHome"
+                app:tint="@color/hotkey3" />
+
+            <ImageButton
+                android:id="@+id/btnBlueHotkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/dot"
+                app:layout_constraintBottom_toBottomOf="@id/btnRedHotkey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnYellowHotkey"
+                app:layout_constraintTop_toBottomOf="@id/cvHome"
+                app:tint="@color/hotkey4" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/background_rounded"
+                android:elevation="5dp"
+                android:text="@string/menu"
+                android:textAlignment="center"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                android:translationZ="3dp"
+                app:layout_constraintBottom_toTopOf="@id/btnOk"
+                app:layout_constraintEnd_toStartOf="@id/btnTopNav"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRedHotkey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEPG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_rounded"
+                android:elevation="5dp"
+                android:text="@string/epg"
+                android:textAlignment="center"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                android:translationZ="3dp"
+                app:layout_constraintEnd_toStartOf="@id/btnBottomNav"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnOk" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRecall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/background_rounded"
+                android:elevation="5dp"
+                android:text="@string/recall"
+                android:textAlignment="center"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                android:translationZ="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTopNav"
+                app:layout_constraintTop_toBottomOf="@id/btnBlueHotkey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_rounded"
+                android:elevation="5dp"
+                android:text="@string/exit"
+                android:textAlignment="center"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                android:translationZ="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnBottomNav"
+                app:layout_constraintTop_toBottomOf="@id/btnOk" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnOk"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnMenu">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRealOK"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/background_rounded"
+                    android:backgroundTint="@color/icon2"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTopNav"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_top_nav"
+                android:drawableTop="@drawable/ic_arrow_up_nav"
+                android:paddingTop="20dp"
+                app:layout_constraintBottom_toTopOf="@id/btnOk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBottomNav"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_bottom_nav"
+                android:drawableBottom="@drawable/ic_arrow_down_nav"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnOk" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLeftNav"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_left_nav"
+                android:drawableStart="@drawable/ic_arrow_left_nav"
+                android:paddingStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/btnOk"
+                app:layout_constraintEnd_toStartOf="@id/btnOk"
+                app:layout_constraintTop_toTopOf="@id/btnOk" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRightNav"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_right_nav"
+                android:drawableEnd="@drawable/ic_arrow_right_nav"
+                android:paddingEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/btnOk"
+                app:layout_constraintStart_toEndOf="@id/btnOk"
+                app:layout_constraintTop_toTopOf="@id/btnOk"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/background_rounded"
+                android:text="@string/info"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/btnFav"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBottomNav" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/background_rounded"
+                android:text="@string/fav"
+                android:textColor="@color/icon"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnInfo"
+                app:layout_constraintTop_toBottomOf="@id/btnBottomNav" />
+
+
+            <ImageButton
+                android:id="@+id/btnRewind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_rewind"
+                app:layout_constraintEnd_toStartOf="@id/btnRecord"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo" />
+
+            <ImageButton
+                android:id="@+id/btnRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_record"
+                app:layout_constraintEnd_toStartOf="@id/btnPlay"
+                app:layout_constraintStart_toEndOf="@id/btnRewind"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo"
+                app:layout_constraintTop_toTopOf="@id/btnRewind" />
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_play"
+                app:layout_constraintEnd_toStartOf="@id/btnStop"
+                app:layout_constraintStart_toEndOf="@id/btnRecord"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo"
+                app:layout_constraintTop_toTopOf="@id/btnRewind" />
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_stop"
+                app:layout_constraintEnd_toStartOf="@id/btnPause"
+                app:layout_constraintStart_toEndOf="@id/btnPlay"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo"
+                app:layout_constraintTop_toTopOf="@id/btnRewind" />
+
+            <ImageButton
+                android:id="@+id/btnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_pause"
+                app:layout_constraintEnd_toStartOf="@id/btnForward"
+                app:layout_constraintStart_toEndOf="@id/btnStop"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo"
+                app:layout_constraintTop_toTopOf="@id/btnRewind" />
+
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_rounded"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_forward"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnPause"
+                app:layout_constraintTop_toBottomOf="@id/btnInfo"
+                app:layout_constraintTop_toTopOf="@id/btnRewind" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
